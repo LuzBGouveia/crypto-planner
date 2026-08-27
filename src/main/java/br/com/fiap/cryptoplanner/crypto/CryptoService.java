@@ -5,7 +5,7 @@ import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
 
 @HttpExchange(
-        url = "https://api.coingecko.com/api/v3/coins/{id}",
+        url = "/api/v3/coins/{id}",
         accept = "application/json"
 )
 public interface CryptoService {

@@ -6,9 +6,9 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.Arrays;
 
 public enum Activity {
-    COMPRAR_BITCOIN("Comprar Bitcrypto", "bitcrypto"),
+    COMPRAR_BITCOIN("Comprar Bitcoin", "bitcoin"),
     VENDER_ETHEREUM("Vender Ethereum", "ethereum"),
-    INVESTIR_DOGECOIN("Investir em Dogecrypto", "dogecrypto");
+    INVESTIR_DOGECOIN("Investir em Dogecoin", "dogecoin");
 
     private final String label;
     private final String cryptoId;
