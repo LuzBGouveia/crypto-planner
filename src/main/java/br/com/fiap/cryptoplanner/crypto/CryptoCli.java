@@ -8,7 +8,7 @@ import org.springframework.web.service.annotation.HttpExchange;
         url = "/api/v3/coins/{id}",
         accept = "application/json"
 )
-public interface CryptoService {
+public interface CryptoCli {
 
     @GetExchange
     public CryptoResponse getCrypto(@PathVariable String id);

@@ -1,18 +1,18 @@
 package br.com.fiap.cryptoplanner.planner;
 
-import br.com.fiap.cryptoplanner.crypto.CryptoService;
+import br.com.fiap.cryptoplanner.crypto.CryptoCli;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class PlannerService {
-    private final CryptoService cryptoService;
+    private final CryptoCli cryptoCli;
 
     public String getPlannerFromActivity(String activityLabel){
         Activity activity = Activity.fromLabel(activityLabel);
 
-        var crypto = cryptoService.getCrypto(activity.getCryptoId());
+        var crypto = cryptoCli.getCrypto(activity.getCryptoId());
         double variation = crypto.marketData().changePercentage();
 
         return switch (activity){
